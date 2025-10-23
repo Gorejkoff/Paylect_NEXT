@@ -1,0 +1,30 @@
+.transaction-details {
+   &__table {
+      padding-bottom: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+   }
+
+   &__body {
+      flex: 1 1 0;
+      padding: 20px;
+      background-color: #1e1e1e;
+   }
+
+   &__title {
+      margin-bottom: 10px;
+      font-family: Stratos;
+      font-size: 20px;
+      white-space: nowrap;
+      line-height: 120%;
+      text-transform: uppercase;
+      color: #C1C1C1;
+   }
+
+   &__data {
+      font-size: 20px;
+      white-space: nowrap;
+      color: #F4F6F6;
+   }
+}

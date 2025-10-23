@@ -1,0 +1,149 @@
+.coins {
+   &__shell {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 10px;
+      width: 100%;
+
+      @media (min-width:1024px) {
+         flex-direction: row;
+         align-items: flex-start;
+      }
+   }
+
+   &__grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      width: 100%;
+
+      @media (min-width:768px) {
+         grid-template-columns: 1fr 1fr;
+      }
+   }
+
+   &__select-scroll {
+      // form
+      flex: 1;
+      min-height: 0;
+      overflow-y: auto;
+      overflow-x: hidden;
+
+      &::-webkit-scrollbar {
+         display: none;
+      }
+   }
+
+   &__select {
+      // label
+      cursor: pointer;
+      padding: 20px 16px;
+      display: flex;
+      gap: 10px;
+      justify-content: space-between;
+      background-color: #373737;
+
+      @media (min-width:1024px) {
+         padding: 28px 20px;
+      }
+   }
+
+   &__select-name {
+      font-family: Stratos;
+      font-size: 20px;
+      line-height: 120%;
+      text-transform: uppercase;
+      color: #ffffff;
+
+      @media (min-width:1150px) {
+         font-size: 32px;
+      }
+   }
+
+   &__select-check {
+      display: flex;
+      align-items: center;
+
+      input {
+         display: none;
+      }
+
+      input:checked+span {
+         background-color: #ffffff;
+         border-color: #ffffff;
+      }
+
+      span {
+         display: inline-block;
+         width: 20px;
+         min-width: 20px;
+         height: 20px;
+         border: 1px solid #848484;
+         transition: border-color 0.3s, background-color 0.3s;
+      }
+   }
+
+   &__coin-icon {
+      // img
+      height: 24px;
+
+      @media (min-width:768px) {
+         height: 50px;
+      }
+   }
+
+   &__select-img {
+      // img 
+      --arrowSize: 32px;
+      width: 0;
+      transition: width 0.3s;
+
+      @media (min-width:768px) {
+         --arrowSize: 60px;
+      }
+
+      @media (min-width:1024px) {
+         --arrowSize: 80px;
+      }
+   }
+
+   &__select-item {
+      // label
+      cursor: pointer;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      font-family: Stratos;
+      font-weight: 500;
+      font-size: 32px;
+      line-height: 120%;
+      color: #141414;
+
+      input {
+         display: none;
+      }
+
+      @media (max-width:1023.98px) {
+         input:checked+.coins__select-img {
+            width: var(--arrowSize);
+         }
+      }
+
+      @media (min-width:768px) {
+         font-size: 52px;
+      }
+
+      @media (min-width:1024px) {
+         &:hover .coins__select-img {
+            width: var(--arrowSize)
+         }
+      }
+
+      @media (min-width:1250px) {
+         font-size: 96px;
+      }
+   }
+}

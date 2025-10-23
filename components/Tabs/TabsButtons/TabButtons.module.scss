@@ -1,0 +1,58 @@
+.tab-buttons {
+
+   &__shell {
+      margin-top: 20px;
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: center;
+
+      &.light {
+         .tab-buttons__body {
+            width: 100%;
+         }
+
+         .tab-buttons__item {
+            flex: 1 1 1%;
+         }
+      }
+   }
+
+   &__body {
+      display: flex;
+      flex-wrap: wrap;
+      border: 1px solid #373737;
+      border-radius: 24px;
+      padding: 3px;
+   }
+
+   &__item {
+      padding: 10px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 40px;
+      font-family: Stratos;
+      font-size: 15px;
+      text-transform: uppercase;
+      color: #848484;
+      transition: all 0.3s;
+
+      &:disabled {
+         pointer-events: none;
+      }
+
+      &:global(.active) {
+         background-color: #141414;
+         border-radius: 60px;
+         color: #F4F6F6;
+      }
+
+      @media (min-width:1024px) {
+         &:not(:global(.active)):hover {
+            color: #141414;
+         }
+      }
+   }
+
+
+}

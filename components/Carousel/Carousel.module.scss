@@ -1,0 +1,54 @@
+.carousel {
+   --color: var(--color-grey-1);
+   --bg-color: var(--color-spring-green-73);
+   padding-top: 0.25735em;
+   padding-bottom: 0.25735em;
+   font-size: 100px;
+   background-color: var(--bg-color);
+   overflow: hidden;
+
+   &.version {
+      --color: var(--color-white-solid);
+      --bg-color: transparent;
+      padding-top: 0;
+      padding-bottom: 0;
+      font-size: 150px;
+      height: 0.71em;
+      border-bottom: 1px solid var(--color);
+   }
+
+   &,
+   &.version {
+      @media (min-width:768px) {
+         font-size: 200px;
+      }
+
+      @media (min-width:1100px) {
+         font-size: 272px;
+      }
+   }
+
+   svg {
+      height: 1em;
+   }
+
+
+   &__text {
+      font-weight: 500;
+      line-height: 108%;
+      color: var(--color);
+
+      &>div {
+         width: max-content;
+         display: flex;
+      }
+   }
+
+   &__stripe {
+      padding-right: 20px;
+      display: flex;
+      gap: 20px;
+   }
+
+
+}

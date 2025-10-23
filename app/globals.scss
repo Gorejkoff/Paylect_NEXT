@@ -1,0 +1,178 @@
+@font-face {
+  font-family:
+    Unbounded;
+  font-display: swap;
+  src:
+    url("../assets/fonts/Unbounded-Regular.woff2") format("woff2"),
+    url("../assets/fonts/Unbounded-Regular.woff") format("woff");
+  font-weight:
+    400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family:
+    Unbounded;
+  font-display: swap;
+  src:
+    url("../assets/fonts/Unbounded-Medium.woff2") format("woff2"),
+    url("../assets/fonts/Unbounded-Medium.woff") format("woff");
+  font-weight:
+    500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family:
+    Unbounded;
+  font-display: swap;
+  src:
+    url("../assets/fonts/Unbounded-SemiBold.woff2") format("woff2"),
+    url("../assets/fonts/Unbounded-SemiBold.woff") format("woff");
+  font-weight:
+    600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family:
+    Stratos;
+  font-display: swap;
+  src:
+    url("../assets/fonts/Stratos-Light.woff2") format("woff2"),
+    url("../assets/fonts/Stratos-Light.woff") format("woff");
+  font-weight:
+    300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family:
+    Stratos;
+  font-display: swap;
+  src:
+    url("../assets/fonts/Stratos-SemiLight.woff2") format("woff2"),
+    url("../assets/fonts/Stratos-SemiLight.woff") format("woff");
+  font-weight:
+    350;
+  font-style: normal;
+}
+
+@font-face {
+  font-family:
+    Stratos;
+  font-display: swap;
+  src:
+    url("../assets/fonts/Stratos-Medium.woff2") format("woff2"),
+    url("../assets/fonts/Stratos-Medium.woff") format("woff");
+  font-weight:
+    500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family:
+    Stratos;
+  font-display: swap;
+  src:
+    url("../assets/fonts/Stratos-Regular.woff2") format("woff2"),
+    url("../assets/fonts/Stratos-Regular.woff") format("woff");
+  font-weight:
+    400;
+  font-style: normal;
+}
+
+html {
+  position: relative;
+}
+
+body {
+  font-family: "Unbounded";
+}
+
+.PhoneInput {
+  gap: 10px;
+  display: none;
+}
+
+.PhoneInputCountrySelect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.PhoneInputCountry {
+  position: relative;
+  height: 20px;
+}
+
+.PhoneInputCountryIcon {
+  width: 30px;
+}
+
+.PhoneInputInput {
+  color: white;
+  font-size: inherit;
+}
+
+input[type="number"],
+input[type="date"] {
+  -moz-appearance: textfield;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button,
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0px;
+}
+
+
+.container {
+  padding-left: 10px;
+  padding-right: 10px;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  width: 100%;
+  max-width: 1920px;
+
+  @media (min-width:768px) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  @media (min-width:1100px) {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+}
+
+.container-large {
+  padding-left: 20px;
+  padding-right: 20px;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  width: 100%;
+  max-width: 1920px;
+}
+
+.container-modal {
+  padding: 0;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  width: 100%;
+  max-width: 1600px;
+}

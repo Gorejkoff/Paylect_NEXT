@@ -1,0 +1,28 @@
+.button-close {
+   svg {
+      width: 10vw;
+      height: 10vw;
+      transition: transform 0.5s;
+
+      @media (min-width:768px) {
+         width: 127px;
+         height: 127px;
+      }
+
+      circle,
+      line {
+         transition: stroke 0.5s;
+      }
+   }
+
+   &:hover {
+      svg {
+         transform: rotate(180deg);
+
+         circle,
+         line {
+            stroke: var(--color-spring-green-73);
+         }
+      }
+   }
+}

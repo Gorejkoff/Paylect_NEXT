@@ -1,0 +1,20 @@
+import React from 'react';
+import styles from '../Buttons.module.scss';
+
+export default function ButtonCloseBlackSmall({ action }) {
+
+   return (
+      <button
+         className={styles['button-common-style__rotate']}
+         type='button'
+         onClick={action}
+         aria-label='close'
+      >
+         <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12.5" cy="12.5" r="12.5" fill="#141414" />
+            <path d="M6.5 18.5209L18.5208 6.50006" stroke="#848484" />
+            <path d="M6.5 6.5L18.5208 18.5208" stroke="#848484" />
+         </svg>
+      </button>
+   );
+};

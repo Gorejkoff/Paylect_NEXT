@@ -1,0 +1,35 @@
+.header {
+
+   &__body {
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      min-height: 156px;
+      padding-bottom: 31px;
+      padding-top: 31px;
+   }
+
+
+   &__logo {
+      max-width: max(25vw, 250px);
+      width: 360px;
+
+      a {
+         display: block;
+      }
+
+      svg {
+         width: 100%;
+         max-width: 100%;
+      }
+   }
+
+   &__menu {
+      display: flex;
+      align-items: center;
+      gap: min(55px, 2.75vw);
+   }
+
+}

@@ -1,7 +1,27 @@
 {
   "compilerOptions": {
     "paths": {
-      "@/*": ["./*"]
+      "@/*": [
+        "./*"
+      ],
+      "@/components/*": [
+        "./components/*"
+      ],
+      "@/json/*": [
+        "./assets/json/*"
+      ],
+      "@/hooks/*": [
+        "./hooks/*"
+      ],
+      "@/fonts/*": [
+        "./assets/fonts/*"
+      ],
+      "@/store_redux/*": [
+        "./store_redux/*"
+      ],
+      "@/api/*": [
+        "./api/*"
+      ]
     }
   }
 }

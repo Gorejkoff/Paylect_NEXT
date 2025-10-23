@@ -1,0 +1,15 @@
+.message {
+   font-family: Stratos;
+   font-size: 16px;
+   line-height: 120%;
+   text-align: center;
+   margin-bottom: 20px;
+
+   &>* {
+      color: #00FF8A;
+   }
+
+   @media (min-width:768px) {
+      font-size: 20px;
+   }
+}

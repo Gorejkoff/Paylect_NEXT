@@ -1,0 +1,151 @@
+.currency-data {
+  &__block {
+    min-height: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #57FFAF;
+    border: 1px solid #57FFAF;
+    transition: background-color 0.5s,
+      border-color 0.5s;
+
+    @media (min-width:1024px) {
+      &[type='button']:not(:hover) {
+        cursor: pointer;
+        background-color: #141414;
+        border-color: rgba(255, 255, 255, 0.12);
+
+        .currency-data__send-title,
+        .currency-data__quantity {
+          color: #848484;
+        }
+
+        .currency-data__format {
+          color: #F4F6F6;
+
+          svg {
+            circle {
+              stroke: #57FFAF;
+            }
+
+            path {
+              fill: #57FFAF;
+            }
+          }
+        }
+
+        .currency-data__estimated-value {
+          color: #ffffff;
+        }
+
+        .currency-data__name {
+          color: #ffffff;
+        }
+
+        .currency-data__change {
+          svg path {
+            stroke: #ffffff;
+          }
+        }
+
+        .currency-data__name-icon {
+          path {
+            fill: #ffffff;
+          }
+        }
+      }
+    }
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  &__send-title {
+    display: block;
+    font-family: Stratos;
+    font-size: 20px;
+    line-height: 120%;
+    text-transform: uppercase;
+    color: #141414;
+    transition: color 0.5s;
+  }
+
+  &__quantity {
+    display: block;
+    font-family: Stratos;
+    font-size: 12px;
+    line-height: 120%;
+    color: #141414;
+    transition: color 0.5s;
+  }
+
+  &__format {
+    font-family: Stratos;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: #141414;
+    transition: color 0.5s;
+
+    svg {
+      circle {
+        transition: stroke 0.5s;
+      }
+
+      path {
+        transition: fill 0.5s;
+      }
+    }
+  }
+
+  &__estimated-value {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 120%;
+    color: #141414;
+  }
+
+  &__footer {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+
+  &__name {
+    font-weight: 600;
+    font-size: 40px;
+    color: #141414;
+    transition: color 0.5s;
+
+    @media (min-width:768px) {
+      font-size: 64px;
+    }
+  }
+
+  &__name-icon {
+    &:nth-last-child(2) {
+      align-self: flex-start;
+    }
+
+    svg path {
+      transition: fill 0.5s;
+    }
+  }
+
+  &__change-body {
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__change {
+    padding: 12px;
+
+    svg path {
+      transition: stroke 0.5s;
+    }
+  }
+}

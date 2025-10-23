@@ -1,0 +1,112 @@
+.advantages {
+   padding: 16px 26px;
+   display: flex;
+   flex-direction: column;
+   background-color: var(--color-white-solid);
+   transition: background-color 0.2s;
+
+   &:hover {
+      background-color: var(--color-spring-green-73);
+   }
+
+   &__grid {
+      padding-top: 60px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 26px;
+      color: var(--color-grey-1);
+
+      @media (min-width: 1100px) {
+         grid-template-columns: 1fr 1fr;
+      }
+
+      @media (min-width: 1250px) {
+         grid-template-columns: 1fr 1fr 1fr;
+      }
+   }
+
+   &__header {
+      margin-bottom: 42px;
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 96%;
+      text-transform: uppercase;
+
+      @media (min-width: 768px) {
+         font-size: 20px;
+      }
+
+      @media (min-width: 110px) {
+         font-size: 16px;
+      }
+
+      @media (min-width: 1400px) {
+         font-size: 20px;
+      }
+
+      h2 {
+         text-align: right;
+
+         @media (max-width: 767.98px) {}
+      }
+   }
+
+   &__image {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      text-align: center;
+   }
+
+
+   &__title {
+      padding-bottom: 10px;
+      font-weight: 500;
+      font-size: 30px;
+      line-height: 107%;
+      text-align: center;
+
+      @media (min-width: 768px) {
+         font-size: 50px;
+      }
+   }
+
+   &__line {
+      margin: 28px auto 20px;
+      width: 100%;
+      max-width: 180px;
+      border-top: 1px solid var(--color-grey-1);
+   }
+
+   &__text {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 370px;
+      flex: 1 1 auto;
+      padding-bottom: 60px;
+      font-size: 18px;
+      line-height: 120%;
+      text-align: center;
+
+      @media (min-width: 768px) {
+         font-size: 20px;
+      }
+   }
+
+   &__number {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 96%;
+      text-transform: uppercase;
+   }
+
+
+
+
+
+
+}
