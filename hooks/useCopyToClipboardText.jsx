@@ -11,6 +11,7 @@ export default function useCopyToClipboardText(data) {
          span.style.cssText = `
          padding: 10px;
          position: absolute;
+         z-index: 2;
          bottom: calc(100% + 10px);
          left: 50%;
          transform: translateX(-50%);
