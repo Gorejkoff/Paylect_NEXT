@@ -10,7 +10,7 @@ import Info from '../Components/Info/Info';
 export default function ExchangeCompleted({ action }) {
 
    return (
-      <div className='container'>
+      <>
          <div className={styles.exchange__title}>Exchange</div>
          <div className={`${styles.exchange__container} modal-body`}>
             <div className={styles.exchange__body}>
@@ -54,6 +54,6 @@ export default function ExchangeCompleted({ action }) {
             </div>
 
          </div>
-      </div>
+      </>
    );
 };

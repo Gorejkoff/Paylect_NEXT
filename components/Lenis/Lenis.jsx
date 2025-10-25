@@ -3,7 +3,7 @@
 import React, { useEffect, useRef, createContext } from 'react';
 import Lenis from "lenis";
 
-export const ScrollToAnchor = createContext();
+export const LenisMethods = createContext();
 
 export default function LenisWrapper({ children }) {
 
@@ -41,9 +41,22 @@ export default function LenisWrapper({ children }) {
       lenis.current.scrollTo(n);
    };
 
+   const lenisScrollStop = () => {
+      if (lenis.current) lenis.current.stop();
+   }
+   const lenisScrollStart = () => {
+      if (lenis.current) lenis.current.start();
+   }
+
+   const lenisMethods = {
+      scrollToAnchor: scrollToAnchor,
+      lenisScrollStop: lenisScrollStop,
+      lenisScrollStart: lenisScrollStart
+   }
+
    return (
-      <ScrollToAnchor.Provider value={scrollToAnchor}>
+      <LenisMethods.Provider value={lenisMethods}>
          {children}
-      </ScrollToAnchor.Provider>
+      </LenisMethods.Provider>
    );
 };

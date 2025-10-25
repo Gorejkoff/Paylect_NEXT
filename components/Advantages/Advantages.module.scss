@@ -1,9 +1,15 @@
 .advantages {
+
    padding: 16px 26px;
    display: flex;
    flex-direction: column;
    background-color: var(--color-white-solid);
    transition: background-color 0.2s;
+
+   @media (max-width:1099.98px) {
+      position: sticky;
+      top: 12px;
+   }
 
    &:hover {
       background-color: var(--color-spring-green-73);

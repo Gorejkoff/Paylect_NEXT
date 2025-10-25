@@ -4,6 +4,7 @@ import { React, useRef } from 'react';
 import styles from './Quote.module.scss';
 import { motion, useScroll } from 'framer-motion'
 import Word from './Word';
+import Image from 'next/image';
 
 const TEXT_QUOTE = 'I was highly impressed by their adaptability, expertise, and commitment in handling the workload. Their dedication to the project, along with their professional demeanor, really caught my attention.'
 
@@ -30,6 +31,12 @@ export default function Quote() {
    return (
       <div id='anchor_4'>
          <div className={styles.quote__body}>
+            <Image
+               src='/webp/image-background.webp'
+               alt='background image'
+               aria-hidden={true}
+               fill
+            />
             <div className='container-large'>
                <motion.div ref={ref}>
                   <div className={styles.quote__text}>

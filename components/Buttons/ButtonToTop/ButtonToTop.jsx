@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { useScramble } from "use-scramble";
 import { motion } from "framer-motion";
-import { ScrollToAnchor } from "@/components/Lenis/Lenis";
+import { LenisMethods } from "@/components/Lenis/Lenis";
 import styles from './styles.module.scss';
 
 
@@ -12,13 +12,13 @@ export default function Link({ text }) {
       scramble: 10,
    });
 
-   const scrollToAnchor = useContext(ScrollToAnchor)
+   const lenisMethods = useContext(LenisMethods)
 
    return (
 
       <a className={styles['button-to-top__button']}
          href="#top"
-         onClick={() => { scrollToAnchor("top") }}
+         onClick={() => { lenisMethods.scrollToAnchor("top") }}
       >
          <span>
             <div className={styles['button-to-top__anchor-text']}>

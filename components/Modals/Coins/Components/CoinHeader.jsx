@@ -8,12 +8,16 @@ import ButtonCloseLight from '@/components/Buttons/ButtonCloseBlackBig/ButtonClo
 
 
 
-export default function CoinHeader({ idModal, title }) {
-   const closeModal = useCloseModal(idModal)
+export default function CoinHeader({ idModal, title, action }) {
+   const closeModal = useCloseModal(idModal);
+   const actionGroup = () => {
+      closeModal();
+      action && action();
+   }
    return (
       <div className={styles['modal__light-header']}>
          <div className={styles['modal__light-title']}>{title}</div>
-         <ButtonCloseLight action={closeModal} />
+         <ButtonCloseLight action={actionGroup} />
       </div>
    );
 };

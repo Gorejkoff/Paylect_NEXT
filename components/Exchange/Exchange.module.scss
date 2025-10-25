@@ -2,11 +2,15 @@
    &__title {
       margin-bottom: 20px;
       font-weight: 500;
-      font-size: 40px;
+      font-size: 32px;
       line-height: 120%;
       text-align: center;
 
-      @media (min-width:992px) {
+      @media (min-width:768px) {
+         font-size: 40px;
+      }
+
+      @media (min-width:1024px) {
          font-size: 64px;
       }
    }
@@ -30,6 +34,11 @@
       button {
          align-self: flex-start;
       }
+   }
+
+   &__header-buttons {
+      display: flex;
+      gap: px;
    }
 
    &__group {
@@ -64,6 +73,10 @@
       margin-bottom: 4px;
       display: grid;
       grid-template-columns: 1fr 1fr;
+
+      &>div:not(:last-child) {
+         margin-bottom: 0;
+      }
    }
 
    &__not-paid {

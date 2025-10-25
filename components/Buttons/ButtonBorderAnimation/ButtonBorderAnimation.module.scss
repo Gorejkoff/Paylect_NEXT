@@ -3,6 +3,11 @@
    --padding: 20px;
    font-size: 20px;
    max-width: 100%;
+   width: 100%;
+
+   @media (min-width:1024px) {
+      width: auto;
+   }
 
    &.adaptive {
       --size: 36px;
@@ -24,46 +29,55 @@
       display: flex;
       align-items: center;
       height: var(--size);
+      width: 100%;
       color: var(--color-white-solid);
+
+      // @media (min-width:992px) {
+      //    width: auto;
+      // }
    }
 
    &__text-wrapper {
       position: relative;
       flex: 1 1 auto;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      // display: flex;
+      // align-items: center;
+      // justify-content: center;
       font-weight: 500;
       line-height: 92%;
       text-transform: uppercase;
       height: 100%;
-      max-width: 100%;
+      // max-width: 100%;
+      // min-width: 0;
    }
 
    &__text {
-      padding-left: var(--padding);
-      padding-right: calc(var(--padding) + var(--size));
-      margin-right: calc(var(--size) * -1);
+      padding: 0 24px;
+      // padding-left: var(--padding);
+      // padding-right: calc(var(--padding) + var(--size));
+      // margin-right: calc(var(--size) * -1);
       position: relative;
       z-index: 2;
       display: flex;
       align-items: center;
       justify-content: center;
       height: 100%;
-      // width: calc(100% + var(--size));
-      // width: max-content;
-      opacity: 0;
+      opacity: 1;
       pointer-events: none;
 
-      @media (min-width:1200px) {
-         white-space: nowrap;
+      @media (min-width:1024px) {
+         // white-space: nowrap;
+         opacity: 0;
       }
    }
 
    &__text-mask {
+      padding: 0 16px;
       position: absolute;
       top: 0;
-      left: 0;
+      left: 50%;
+      width: 100%;
+      transform: translateX(-50%);
       opacity: 1;
       pointer-events: all;
    }

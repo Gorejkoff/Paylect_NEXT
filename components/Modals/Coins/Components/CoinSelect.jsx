@@ -13,7 +13,7 @@ export default function CoinSelect({ text, img, alt }) {
          <input
             type="radio"
             name="coin_select"
-            onChange={openModal}
+            onClick={openModal}
          />
          <img className={styles['coins__select-img']} src="./svg/arrow-color.svg" alt="selected" />
          {text}

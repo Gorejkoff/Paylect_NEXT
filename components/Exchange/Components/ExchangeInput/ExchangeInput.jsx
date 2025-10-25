@@ -23,7 +23,7 @@ export default function ExchangeInput({ value }) {
          <div className={styles['exchange-input__value']}>
             <input
                ref={ref}
-               type='text'
+               type='number'
                name='value_currency'
                onChange={controlValueInput}
             />

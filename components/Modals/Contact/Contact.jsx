@@ -134,7 +134,6 @@ export default function Contact() {
               </div>
               <div className={styles['contact__button-wrapper']}>
                 <ButtonBorderAninamation type='submit' text='send' />
-                {/* <Button type={'submit'} text='send' /> */}
               </div>
             </div>
           </div>

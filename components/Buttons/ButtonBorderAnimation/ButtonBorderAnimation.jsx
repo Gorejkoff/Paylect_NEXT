@@ -14,6 +14,7 @@ export default function Button({ action, text, type, adaptive, href }) {
 
    const MotionElement = href ? motion.create(Link) : motion.button;
    const MIN768 = useMediaQuery('(min-width: 768px)');
+   const MIN1024 = useMediaQuery('(min-width: 1024px)');
    const trigger = useRef(null);
    const isInView = useInView(trigger, { amount: 1, once: !MIN768.matches });
    const { ref, replay } = useScramble({
@@ -83,12 +84,12 @@ export default function Button({ action, text, type, adaptive, href }) {
             />
 
             <span className={styles['button-border-animation__text-wrapper']}>
-               <span
+               {MIN1024 && <span
                   className={`${styles['button-border-animation__text']} ${styles['button-border-animation__text-mask']}`}
                   ref={ref}
                   onMouseOver={replay}
                   onFocus={replay}
-               />
+               />}
                <span className={styles['button-border-animation__text']}>
                   {text}
                </span>

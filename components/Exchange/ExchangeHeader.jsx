@@ -1,9 +1,9 @@
 import React from 'react';
 import styles from './Exchange.module.scss';
 import ButtonNotifications from '@/components/Buttons/ButtonNotifications/ButtonNotifications';
-import ButtonCloseBlackSmall from '@/components/Buttons/ButtonCloseBlackSmall/ButtonCloseBlackSmall';
 import ButtonBack from '@/components/Buttons/ButtonBack/ButtonBack';
 import Progress from '@/components/Icons/Progress_Icon/Progress';
+import ButtonCloseBlackBig from '../Buttons/ButtonCloseBlackBig/ButtonCloseBlackBig';
 
 
 
@@ -22,13 +22,9 @@ export default function ExchangeHeader({ iconType, action }) {
          </svg>
 
          {iconType === 'notifications' &&
-            <div >
-               <ButtonNotifications
-                  action={() => { }}
-               />
-               <ButtonCloseBlackSmall
-                  action={action.closeModal}
-               />
+            <div className={styles['exchange__header-buttons']}>
+               <ButtonNotifications action={() => { }} />
+               <ButtonCloseBlackBig action={action.closeModal} />
             </div>
          }
 
@@ -37,9 +33,8 @@ export default function ExchangeHeader({ iconType, action }) {
          }
 
          {iconType === 'progress' &&
-            <Progress
-               text='In progress'
-            />}
+            <Progress text='In progress' />
+         }
 
          {iconType === 'not_paid' &&
             <div className={styles['exchange__not-paid']} >not paid</div>

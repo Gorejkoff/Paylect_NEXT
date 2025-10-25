@@ -10,7 +10,7 @@ import stylesCompleted from '../ExchangeCompleted/ExchangeCompleted.module.scss'
 export default function ExchangeNotRaid({ action }) {
 
    return (
-      <div className='container'>
+      <>
          <div className={styles.exchange__title}>Send funds to the address below</div>
          <div className={`${styles.exchange__container} modal-body`}>
             <div className={styles.exchange__body}>
@@ -43,6 +43,6 @@ export default function ExchangeNotRaid({ action }) {
                />
             </div>
          </div>
-      </div >
+      </>
    );
 };

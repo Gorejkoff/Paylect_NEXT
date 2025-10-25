@@ -2,8 +2,10 @@
    &__body {
       position: relative;
       min-height: 63.8vw;
-      background-image: url('../../public/jpg/image-background.jpg');
-      background-size: cover;
+
+      img {
+         z-index: -1;
+      }
    }
 
    &__text {

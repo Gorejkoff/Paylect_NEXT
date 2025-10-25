@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react';
-import styles from './styles.module.scss';
+import styles from './Services.module.scss';
 import ButtonBorderAnimation from '@/components/Buttons/ButtonBorderAnimation/ButtonBorderAnimation'
 import useOpenModal from '@/store_redux/hooks/modalsHooks/useOpenModal';
 

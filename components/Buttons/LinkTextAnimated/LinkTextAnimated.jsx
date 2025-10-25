@@ -4,7 +4,7 @@ import React, { useContext, useEffect, useRef } from 'react';
 import { useScramble } from "use-scramble";
 import { motion } from "framer-motion";
 import styles from './styles.module.scss';
-import { ScrollToAnchor } from '@/components/Lenis/Lenis';
+import { LenisMethods } from '@/components/Lenis/Lenis';
 import useOpenModal from '@/store_redux/hooks/modalsHooks/useOpenModal';
 
 const variantsHover = {
@@ -28,7 +28,7 @@ const variantsSVG = {
 
 export default function LinkTextAnimated({ props }) {
 
-   const scrollToAnhor = useContext(ScrollToAnchor)
+   const lenisMethods = useContext(LenisMethods)
 
    const { ref, replay } = useScramble({
       text: props.name,
@@ -43,7 +43,7 @@ export default function LinkTextAnimated({ props }) {
          } :
          {
             href: "#anchor_" + props.id,
-            onClick: () => { scrollToAnhor("#anchor_" + props.id) }
+            onClick: () => { lenisMethods.scrollToAnchor("#anchor_" + props.id) }
          }
 
    const propsButton = {

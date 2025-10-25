@@ -126,10 +126,8 @@
          display: none;
       }
 
-      @media (max-width:1023.98px) {
-         input:checked+.coins__select-img {
-            width: var(--arrowSize);
-         }
+      input:checked+.coins__select-img {
+         width: var(--arrowSize);
       }
 
       @media (min-width:768px) {

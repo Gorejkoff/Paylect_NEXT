@@ -10,6 +10,7 @@ const id = 'blockchain';
 
 export default function BlockchainCoins() {
 
+
    return (
       <BackgroundModal id={id}>
          <div className={stylesModal.modal__scroll}>

@@ -90,6 +90,10 @@ body {
   font-family: "Unbounded";
 }
 
+.lenis-stopped body {
+  overflow: hidden;
+}
+
 .PhoneInput {
   gap: 10px;
   display: none;

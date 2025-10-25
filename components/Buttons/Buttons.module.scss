@@ -1,6 +1,8 @@
 .button-common-style {
 
    &__body {
+      position: relative;
+
       svg {
          circle {
             fill: transparent;
@@ -28,20 +30,12 @@
    &__rotate {
       svg {
          transition: transform 0.3s;
-
-         path {
-            transition: stroke 0.3s;
-         }
       }
 
       @media (min-width:1024px) {
          &:hover {
             svg {
                transform: rotate(180deg);
-
-               path {
-                  stroke: #57FFAF;
-               }
             }
          }
       }
@@ -64,4 +58,20 @@
          }
       }
    }
+
+   &__size {
+      --size: 28px;
+      width: var(--size);
+      height: var(--size);
+      border-radius: 50%;
+      background-color: #141414;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @media (min-width:1024px) {
+         --size: 50px;
+      }
+   }
+
 }

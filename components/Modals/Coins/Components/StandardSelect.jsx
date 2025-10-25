@@ -12,8 +12,8 @@ export default function StandardkSelect({ name }) {
    return (
       <label className={styles.coins__select}
          onClick={() => {
-            closeStandard()
-            setTimeout(closeBlockchain, 300)
+            closeStandard();
+            setTimeout(closeBlockchain, 300);
          }}
       >
          <span className={styles['coins__select-name']}>{name}</span>

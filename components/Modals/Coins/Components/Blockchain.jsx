@@ -9,11 +9,14 @@ import TabButtons from '../../../Tabs/TabsButtons/TabButtons';
 import Search from '../../../FormsElements/Search/Search';
 import CoinSelect from './CoinSelect';
 import CoinHeader from './CoinHeader';
+import useCloseModal from '@/store_redux/hooks/modalsHooks/useCloseModal';
+
 
 const idModal = 'blockchain'
 
 function Content() {
    const [isActive, setIsActive] = useState(changeTabsProps[0].id);
+   const closeModal = useCloseModal('standard');
 
    return (
       <div className={stylesModal['modal__light-padding']} style={{ maxHeight: 'calc(100vh - 2 * var(--padding, 50px))' }}>
@@ -21,6 +24,7 @@ function Content() {
          <CoinHeader
             idModal={idModal}
             title='Select a coin'
+            action={closeModal}
          />
 
          <TabButtons

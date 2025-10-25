@@ -1,5 +1,5 @@
 import React from "react";
-import styles from './styles.module.scss';
+import styles from './Services.module.scss';
 import ServicesLottie from "./ServicesLottie";
 import ServicesButton from "./ServicesButton";
 

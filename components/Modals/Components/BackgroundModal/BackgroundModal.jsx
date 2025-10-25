@@ -1,11 +1,14 @@
 'use client'
 
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useContext } from 'react';
 import styles from './styles.module.scss';
 import { useSelector } from 'react-redux';
 import animationModal from '@/components/Modals/AnimationModal';
 import modalStyles from '@/components/Modals/Modals.module.scss';
 import useCloseModal from '@/store_redux/hooks/modalsHooks/useCloseModal';
+import { LenisMethods } from '@/components/Lenis/Lenis';
+
+
 
 const animationBackground = {
    visible: {
@@ -28,18 +31,23 @@ export default function BackgroundModal({
    const ref = useRef();
    const closeModal = useCloseModal(id);
    const isOpen = useSelector(state => state.modals[id].isOpen);
+   const lenisMethods = useContext(LenisMethods);
+
    // disable scrolling 'dependence={true}'
    // or pass a custom dependence
    useEffect(() => {
+      if (isOpen) lenisMethods.lenisScrollStop();
+      if (!isOpen && !document.querySelector('.modal-is-open')) lenisMethods.lenisScrollStart();
       ref.current.scrollTo({
          top: 0,
          behavior: 'smooth'
       });
-   }, [dependence ? dependence : isOpen]);
+   }, [dependence, isOpen]);
 
    return (
       <div
-         className={styles.background}
+         id={id}
+         className={`${styles.background} ${isOpen ? 'modal-is-open' : ''}`}
       >
          <div className={styles.background__layer}
             style={isOpen ? animationBackground.visible : animationBackground.hidden}
