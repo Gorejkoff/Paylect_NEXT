@@ -1,6 +1,6 @@
 'use client'
 
-import { React, useRef, useState } from 'react';
+import { React, useEffect, useRef, useState } from 'react';
 import styles from '../Form.module.scss';
 import { motion, useInView } from 'framer-motion';
 import useValidateTest from '@/hooks/forms/useValidateTest';
@@ -10,6 +10,7 @@ import flags from 'react-phone-number-input/flags';
 
 
 import parsePhoneNumber from 'libphonenumber-js'
+import Input from '../Input/Input';
 
 
 const variantsH = {
@@ -196,15 +197,7 @@ export default function InputMedia({ statePhoneInput }) {
                </div>
             </div>
 
-            <div className={styles.input__link}>
-               <input
-                  ref={inputItem}
-                  type='text'
-                  name='link'
-                  id='link'
-                  required
-                  onChange={() => entering()}
-               />
+            <div>
 
                <PhoneInput
                   ref={phoneInput}
@@ -218,39 +211,18 @@ export default function InputMedia({ statePhoneInput }) {
                   autoComplete='tel'
                />
 
-               <motion.div
-                  className={`${styles['input__side-line']} line`}
-                  style={{ left: 0 }}
-                  variants={variantsV}
-                  initial='hid'
-                  animate={isInView ? 'show' : 'hide'}
+               <Input
+                  ref={inputItem}
+                  type='text'
+                  name='link'
+                  id='link'
+                  required
+                  disabled
+                  action={entering}
                />
+
             </div>
          </div>
-
-         <div className={styles.input__line}>
-            <motion.div
-               className={`${styles['input__bottom-line']} line`}
-               variants={variantsH}
-               initial='hid'
-               animate={isInView ? 'show' : 'hide'}
-            />
-            <motion.div
-               className={`${styles['input__side-line']} line`}
-               style={{ right: 0 }}
-               variants={variantsV}
-               initial='hid'
-               animate={isInView ? 'show' : 'hide'}
-            />
-            <motion.div
-               className={`${styles['input__side-line']} line`}
-               style={{ left: 0 }}
-               variants={variantsV}
-               initial='hid'
-               animate={isInView ? 'show' : 'hide'}
-            />
-         </div>
-
       </div >
    )
 

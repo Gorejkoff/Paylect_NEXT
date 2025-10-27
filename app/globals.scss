@@ -90,6 +90,7 @@ body {
   font-family: "Unbounded";
 }
 
+html.lenis-stopped,
 .lenis-stopped body {
   overflow: hidden;
 }
@@ -113,6 +114,14 @@ body {
 .PhoneInputCountry {
   position: relative;
   height: 20px;
+
+  option {
+    font-size: 12px;
+
+    @media (min-width:400px) {
+      font-size: inherit;
+    }
+  }
 }
 
 .PhoneInputCountryIcon {

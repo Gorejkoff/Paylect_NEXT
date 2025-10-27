@@ -1,6 +1,6 @@
 'use client'
 
-import { React, useRef, useState } from 'react';
+import { React, useEffect, useRef, useState } from 'react';
 import styles from '../Form.module.scss';
 import { motion, useInView } from 'framer-motion';
 import useValidateTest from '@/hooks/forms/useValidateTest';
@@ -41,7 +41,7 @@ const variantsV = {
 }
 
 
-export default function Input({ tag, type, id, className, name, placeholder, required, disabled, regexp, action }) {
+export default function Input({ tag, ref, type, id, className, name, placeholder, required, disabled, regexp, action }) {
 
    const reg = new RegExp(regexp)
    const media768 = useMediaQuery('(min-width: 768px)');
@@ -59,6 +59,12 @@ export default function Input({ tag, type, id, className, name, placeholder, req
       }
       setValid(false);
    }
+
+   useEffect(() => {
+      if (typeof ref === 'object') {
+         ref.current = field.current;
+      }
+   })
 
    const Tag = tag ? tag : 'input'
 

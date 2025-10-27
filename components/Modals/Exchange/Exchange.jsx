@@ -29,7 +29,7 @@ export default function Contact() {
    };
 
    return (
-      <BackgroundModal id={id} opacity={true} dependence={step}>
+      <BackgroundModal id={id} opacity={true}>
 
          <div className={styles.modal__scroll}>
             <div className={styles.modal__container}>

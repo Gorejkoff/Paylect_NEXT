@@ -73,14 +73,6 @@
     }
   }
 
-  &__link {
-    position: relative;
-
-    .not-valid & .line {
-      background-color: var(--paylect-outrageous-orange) !important;
-    }
-  }
-
   &__line {
     margin-top: -16px;
     position: relative;
