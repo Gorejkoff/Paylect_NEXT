@@ -200,6 +200,7 @@ export default function InputMedia({ statePhoneInput }) {
             <div>
 
                <PhoneInput
+                  style={{ maxWidth: 'calc(100vw - 40px)' }}
                   ref={phoneInput}
                   international
                   defaultCountry='RU'
