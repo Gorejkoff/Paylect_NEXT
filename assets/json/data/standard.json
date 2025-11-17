@@ -1,29 +1,38 @@
 [
    {
+      "id": 1,
       "name": "TRC20"
    },
    {
+      "id": 2,
       "name": "ERC20"
    },
    {
+      "id": 3,
       "name": "BEP20"
    },
    {
+      "id": 4,
       "name": "SOLANA"
    },
    {
+      "id": 5,
       "name": "POLYGON"
    },
    {
+      "id": 6,
       "name": "TON"
    },
    {
+      "id": 7,
       "name": "ARBITRUM"
    },
    {
+      "id": 8,
       "name": "OPTIMISM"
    },
    {
+      "id": 9,
       "name": "AVALANCHE C-CHAN"
    }
 ]

@@ -1,37 +1,138 @@
 [
    {
-      "text": "Bitcoin",
+      "id": 1,
+      "name": "Bitcoin",
       "img": "./icon_currency/btc-icon.svg",
-      "alt": "btc"
+      "token": "btc",
+      "category": "crypto",
+      "badge": "./icon_currency/btc-badge.svg"
    },
    {
-      "text": "Ethereum",
+      "id": 2,
+      "name": "Ethereum",
       "img": "./icon_currency/eth-icon.svg",
-      "alt": "eth"
+      "token": "eth",
+      "category": "crypto",
+      "badge": "./icon_currency/eth-badge.svg"
    },
    {
-      "text": "Litecoin",
-      "img": "./icon_currency/ltc-icon.svg",
-      "alt": "ltc"
-   },
-   {
-      "text": "Techer",
-      "img": "./icon_currency/usdt-icon.svg",
-      "alt": "usdt"
-   },
-   {
-      "text": "Dash",
+      "id": 3,
+      "name": "Dash",
       "img": "./icon_currency/dash-icon.svg",
-      "alt": "dash"
+      "token": "dash",
+      "category": "crypto",
+      "badge": "./icon_currency/dash-badge.svg"
    },
    {
-      "text": "XRP",
-      "img": "./icon_currency/xrp-icon.svg",
-      "alt": "xrp"
+      "id": 4,
+      "name": "Litecoin",
+      "img": "./icon_currency/ltc-icon.svg",
+      "token": "ltc",
+      "category": "crypto",
+      "badge": "./icon_currency/ltc-badge.svg"
    },
    {
-      "text": "Cardano",
+      "id": 5,
+      "name": "Solana",
+      "img": "./icon_currency/sol-icon.svg",
+      "token": "sol",
+      "category": "crypto",
+      "badge": "./icon_currency/sol-badge.svg"
+   },
+   {
+      "id": 6,
+      "name": "Hyperliquid",
+      "img": "./icon_currency/hype-icon.svg",
+      "token": "hype",
+      "category": "altcoin",
+      "badge": "./icon_currency/hype-badge.svg"
+   },
+   {
+      "id": 7,
+      "name": "Dogecoin",
+      "img": "./icon_currency/doge-icon.svg",
+      "token": "doge",
+      "category": "crypto",
+      "badge": "./icon_currency/doge-badge.svg"
+   },
+   {
+      "id": 8,
+      "name": "Chainlink",
+      "img": "./icon_currency/link-icon.svg",
+      "token": "link",
+      "category": "altcoin",
+      "badge": "./icon_currency/link-badge.svg"
+   },
+   {
+      "id": 9,
+      "name": "Cardano",
       "img": "./icon_currency/ada-icon.svg",
-      "alt": "ada"
+      "token": "ada",
+      "category": "altcoin",
+      "badge": "./icon_currency/ada-badge.svg"
+   },
+   {
+      "id": 10,
+      "name": "BNB",
+      "img": "./icon_currency/bnb-icon.svg",
+      "token": "bnb",
+      "category": "crypto",
+      "badge": "./icon_currency/bnb-badge.svg"
+   },
+   {
+      "id": 11,
+      "name": "Bitcoin Cash",
+      "img": "./icon_currency/bth-icon.svg",
+      "token": "bth",
+      "category": "crypto",
+      "badge": "./icon_currency/bth-badge.svg"
+   },
+   {
+      "id": 12,
+      "name": "XRP",
+      "img": "./icon_currency/xrp-icon.svg",
+      "token": "xrp",
+      "category": "crypto",
+      "badge": "./icon_currency/xrp-badge.svg"
+   },
+   {
+      "id": 13,
+      "name": "USDC",
+      "img": "./icon_currency/usdc-icon.svg",
+      "token": "usdc",
+      "category": "stablecoin",
+      "badge": "./icon_currency/usdc-badge.svg"
+   },
+   {
+      "id": 14,
+      "name": "Tron",
+      "img": "./icon_currency/trx-icon.svg",
+      "token": "trx",
+      "category": "crypto",
+      "badge": "./icon_currency/trx-badge.svg"
+   },
+   {
+      "id": 15,
+      "name": "Techer",
+      "img": "./icon_currency/usdt-icon.svg",
+      "token": "usdt",
+      "category": "stablecoin",
+      "badge": "./icon_currency/usdt-badge.svg"
+   },
+   {
+      "id": 16,
+      "name": "Stellar",
+      "img": "./icon_currency/xml-icon.svg",
+      "token": "xml",
+      "category": "crypto",
+      "badge": "./icon_currency/xml-badge.svg"
+   },
+   {
+      "id": 17,
+      "name": "PayPal USD",
+      "img": "./icon_currency/pyusd-icon.svg",
+      "token": "pyusd",
+      "category": "stablecoin",
+      "badge": "./icon_currency/pyusd-badge.svg"
    }
 ]

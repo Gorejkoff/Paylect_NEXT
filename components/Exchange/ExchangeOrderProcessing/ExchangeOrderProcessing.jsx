@@ -4,11 +4,18 @@ import ButtonBorderAnimation from '@/components/Buttons/ButtonBorderAnimation/Bu
 import ExchangeHeader from '../ExchangeHeader';
 import CurrencyData from '../Components/CurrencyData/CurrencyData';
 import Info from '../Components/Info/Info';
+import { useSelector } from 'react-redux';
 
 
 
 
 export default function ExchangeProcessing({ action }) {
+   const tokenSend = useSelector(state => state.coin.send.token);
+   const badgeSend = useSelector(state => state.coin.send.badge);
+   const tokenGet = useSelector(state => state.coin.get.token);
+   const badgeGet = useSelector(state => state.coin.get.badge);
+   const sendFormat = useSelector(state => state.coin.sendFormat.name);
+   const getFormat = useSelector(state => state.coin.getFormat.name);
 
 
 
@@ -25,10 +32,10 @@ export default function ExchangeProcessing({ action }) {
                      className="colored"
                      title="You send"
                      // subtitle="146 currencies"
-                     format="TRC20"
-                     name="BTC"
+                     format={sendFormat}
+                     token={tokenSend}
+                     pathSVG={badgeSend}
                      estimatedValue="1"
-                     pathSVG={'./icon_currency/Bitcoin.svg'}
                      typeButton={false}
                   />
 
@@ -36,10 +43,10 @@ export default function ExchangeProcessing({ action }) {
                      className="colored"
                      title="You receive"
                      // subtitle="146 currencies"
-                     format="TRC20"
-                     name="ETH"
+                     format={getFormat}
+                     token={tokenGet}
+                     pathSVG={badgeSend}
                      estimatedValue="≈ 110 192.6061"
-                     pathSVG={'./icon_currency/Ether.svg'}
                      typeButton={false}
                   />
 

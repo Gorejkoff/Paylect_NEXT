@@ -1,24 +1,29 @@
 'use ckient'
 
-import React, { useRef } from 'react';
+import React, { useState } from 'react';
 import styles from './Search.module.scss';
 
 
-export default function Search() {
+export default function Search({ searchCoin }) {
 
-   const searchRef = useRef(null)
+   const [value, setValue] = useState('');
 
-   function clearSearch() {
-      searchRef.current.value = '';
+   const setInputValue = (event) => {
+      setValue(event.target.value);
+      searchCoin(event.target.value);
+   };
+   const clearSearch = () => {
+      setValue('');
+      searchCoin('');
    }
-
    return (
       <div className={styles.search__border}>
          <input
+            value={value}
             type="text"
             name="search"
             placeholder="Search by coin"
-            ref={searchRef}
+            onChange={setInputValue}
          />
 
          <button

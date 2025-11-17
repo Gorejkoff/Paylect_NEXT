@@ -3,24 +3,24 @@
       "id": 1,
       "text": "All",
       "disabled": false,
-      "component": {}
+      "filter": "all"
    },
    {
       "id": 2,
       "text": "Cryptocurrencies",
       "disabled": false,
-      "component": null
+      "filter": "crypto"
    },
    {
       "id": 3,
       "text": "Altcoins",
       "disabled": false,
-      "component": null
+      "filter": "altcoin"
    },
    {
       "id": 4,
       "text": "Stablecoins",
       "disabled": false,
-      "component": null
+      "filter": "stablecoin"
    }
 ]

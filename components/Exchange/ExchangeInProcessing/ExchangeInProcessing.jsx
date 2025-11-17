@@ -8,8 +8,16 @@ import CurrencyData from '../Components/CurrencyData/CurrencyData';
 import Message from '../Components/Message/Message';
 import InfoCopy from '../Components/InfoCopy/InfoCopy';
 import Info from '../Components/Info/Info';
+import { useSelector } from 'react-redux';
 
 export default function ExchangeInProcessing({ action }) {
+
+   const tokenSend = useSelector(state => state.coin.send.token);
+   const badgeSend = useSelector(state => state.coin.send.badge);
+   const tokenGet = useSelector(state => state.coin.get.token);
+   const badgeGet = useSelector(state => state.coin.get.badge);
+   const sendFormat = useSelector(state => state.coin.sendFormat.name);
+   const getFormat = useSelector(state => state.coin.getFormat.name);
 
    return (
       <>
@@ -19,24 +27,23 @@ export default function ExchangeInProcessing({ action }) {
                <ExchangeHeader iconType='progress' />
                <div className={styles.exchange__table}>
                   <CurrencyData
+                     name='BTC'
                      className='colored'
                      title='You send'
                      // subtitle='146 currencies'
-                     format='TRC20'
-                     name='BTC'
-                     estimatedValue='1'
-                     pathSVG={'./icon_currency/Bitcoin.svg'}
+                     format={sendFormat}
+                     token={tokenSend}
+                     pathSVG={badgeSend}
                      selectionButton={false}
+                     estimatedValue='1'
                   />
                   <CurrencyData
                      className='colored'
-                     title='You receive'
-                     // subtitle='146 currencies'
-                     format='TRC20'
-                     name='ETH'
-                     estimatedValue='≈ 110 192.6061'
-                     pathSVG={'./icon_currency/Ether.svg'}
+                     format={getFormat}
+                     token={tokenGet}
+                     pathSVG={badgeGet}
                      selectionButton={false}
+                     estimatedValue='≈ 110 192.6061'
                   />
                </div>
 

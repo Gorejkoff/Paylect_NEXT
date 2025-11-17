@@ -4,15 +4,20 @@ import React from 'react';
 import styles from './CurrencyData.module.scss';
 import useOpenModal from '@/store_redux/hooks/modalsHooks/useOpenModal';
 import useGetSVGCode from '@/hooks/useGetSVGCode';
+import useChangeDirection from '@/store_redux/hooks/selectCoinHooks/useChangeDirection';
 
 
-export default function CurrencyData({ title, subtitle, format, name, estimatedValue, typeButton, pathSVG }) {
+export default function CurrencyData({ title, subtitle, format, token, estimatedValue, typeButton, pathSVG, direction = 'send' }) {
    const openModal = useOpenModal('blockchain');
    const iconSVG = useGetSVGCode(pathSVG);
+   const changeDirection = useChangeDirection(direction);
 
    const propsButton = typeButton ? {
       type: 'button',
-      onClick: () => openModal()
+      onClick: () => {
+         openModal();
+         changeDirection();
+      }
    } : {}
 
    const Tag = typeButton ? 'button' : 'div'
@@ -38,7 +43,7 @@ export default function CurrencyData({ title, subtitle, format, name, estimatedV
          <span>
             <span className={styles['currency-data__estimated-value']}>{estimatedValue}</span>
             <span className={styles['currency-data__footer']}>
-               <span className={styles['currency-data__name']}>{name}</span>
+               <span className={styles['currency-data__name']}>{token}</span>
                {pathSVG && <span className={styles['currency-data__name-icon']} dangerouslySetInnerHTML={{ __html: iconSVG.icon }} />}
                {typeButton ?
                   <span className={styles['currency-data__change-body']}>

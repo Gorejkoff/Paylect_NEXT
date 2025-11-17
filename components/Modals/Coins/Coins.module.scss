@@ -24,10 +24,27 @@
       }
    }
 
-   &__select-scroll {
-      // form
-      flex: 1;
+   &__select-swiper {
+      display: flex;
+      gap: 20px;
       min-height: 0;
+      width: 100%;
+   }
+
+   &__select-swiper-wrapper {
+      --gap: 20px;
+      max-width: 100%;
+      flex: 1 1 auto;
+      display: flex;
+      gap: var(--gap);
+      min-height: 0;
+      transform: translateX(calc(var(--offset, 0)*(100% + var(--gap)) * -1));
+      transition: transform 0.3s;
+   }
+
+   &__select-scroll {
+      flex: 0 0 100%;
+      min-height: 420px;
       overflow-y: auto;
       overflow-x: hidden;
 
@@ -37,13 +54,20 @@
    }
 
    &__select {
-      // label
       cursor: pointer;
       padding: 20px 16px;
       display: flex;
+      align-items: center;
       gap: 10px;
       justify-content: space-between;
       background-color: #373737;
+
+      &:global(.active) {
+         .coins__select-check {
+            background-color: #ffffff;
+            border-color: #ffffff;
+         }
+      }
 
       @media (min-width:1024px) {
          padding: 28px 20px;
@@ -66,23 +90,12 @@
       display: flex;
       align-items: center;
 
-      input {
-         display: none;
-      }
-
-      input:checked+span {
-         background-color: #ffffff;
-         border-color: #ffffff;
-      }
-
-      span {
-         display: inline-block;
-         width: 20px;
-         min-width: 20px;
-         height: 20px;
-         border: 1px solid #848484;
-         transition: border-color 0.3s, background-color 0.3s;
-      }
+      display: inline-block;
+      width: 20px;
+      min-width: 20px;
+      height: 20px;
+      border: 1px solid #848484;
+      transition: border-color 0.3s, background-color 0.3s;
    }
 
    &__coin-icon {
@@ -110,7 +123,6 @@
    }
 
    &__select-item {
-      // label
       cursor: pointer;
       margin-bottom: 20px;
       display: flex;
@@ -122,11 +134,8 @@
       line-height: 120%;
       color: #141414;
 
-      input {
-         display: none;
-      }
 
-      input:checked+.coins__select-img {
+      &:global(.active) .coins__select-img {
          width: var(--arrowSize);
       }
 
