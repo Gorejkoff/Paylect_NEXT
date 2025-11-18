@@ -62,10 +62,8 @@ export default function useControlValueInput(ref) {
       value = value.replace(/[,.]/g, '');
       value = value.replace(/[*]/, '.');
       value = value.replace(/[^\d.]/g, '');
-
       event.target.value = value;
       data.current.element.innerHTML = value;
-
       calcSize()
    }
 

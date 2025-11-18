@@ -18,6 +18,12 @@
       grid-template-columns: 1fr;
       gap: 10px;
       width: 100%;
+      max-height: calc(100vh - 24px);
+      overflow-y: auto;
+
+      &::-webkit-scrollbar {
+         display: none;
+      }
 
       @media (min-width:768px) {
          grid-template-columns: 1fr 1fr;
