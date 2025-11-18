@@ -13,7 +13,7 @@ export default function ExchangeProcessing({ action }) {
    const tokenSend = useSelector(state => state.coin.send.token);
    const badgeSend = useSelector(state => state.coin.send.badge);
    const tokenGet = useSelector(state => state.coin.get.token);
-   const badgeGet = useSelector(state => state.coin.get.badge);
+   // const badgeGet = useSelector(state => state.coin.get.badge);
    const sendFormat = useSelector(state => state.coin.sendFormat.name);
    const getFormat = useSelector(state => state.coin.getFormat.name);
 

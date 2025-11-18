@@ -30,8 +30,6 @@ export default function TabButtons({ listButtons, isActive, setIsActive, setClas
       ref.current.style.setProperty('--offset-bottom', dataSise.current.parentHeight - dataSise.current.top - dataSise.current.height - 2 + 'px')
       ref.current.style.setProperty('--offset-right', dataSise.current.left + 'px')
       ref.current.style.setProperty('--offset-left', dataSise.current.parentWidth - dataSise.current.left - dataSise.current.width + 'px')
-      console.log(dataSise.current);
-      console.log(ref.current);
    }
 
    useEffect(() => { getSize() })

@@ -11,7 +11,6 @@ import CoinHeader from './CoinHeader';
 import useCloseModal from '@/store_redux/hooks/modalsHooks/useCloseModal';
 import { useSelector } from 'react-redux';
 // import { motion } from 'framer-motion';
-import useResizeObserver from '@/hooks/useResizeObserver';
 import BlockchainList from './BlockchainList';
 
 
@@ -21,7 +20,6 @@ export default function Blockchain() {
    const [isActive, setIsActive] = useState(listTabsProps[0].id);
    const [search, setSearch] = useState(null);
    const closeModal = useCloseModal('standard');
-   const [refResize, dimensions] = useResizeObserver()
    const activeCoin = useSelector(state => state.coin[state.coin.direction.action].id);
 
    const list = useMemo(() => {
@@ -68,9 +66,7 @@ export default function Blockchain() {
                searchCoin={searchCoin}
             />
 
-            <div className={styles['coins__select-swiper']}
-               ref={refResize}
-            >
+            <div className={styles['coins__select-swiper']}>
                <div
                   className={styles['coins__select-swiper-wrapper']}
                   style={{ '--offset': isActive - 1 }}
@@ -80,7 +76,6 @@ export default function Blockchain() {
                         key={index}
                         list={item}
                         activeCoin={activeCoin}
-                        dimensions={dimensions}
                      />
                   )}
                </div>

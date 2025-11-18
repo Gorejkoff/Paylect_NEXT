@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import BackgroundModal from '../Components/BackgroundModal/BackgroundModal';
 import styles from '../Modals.module.scss';
 import useCloseModal from '@/store_redux/hooks/modalsHooks/useCloseModal';
@@ -28,8 +28,9 @@ export default function Contact() {
       closeModal: () => closeModal()
    };
 
+
    return (
-      <BackgroundModal id={id} opacity={true}>
+      <BackgroundModal id={id} opacity={true} dependence={step}>
 
          <div className={styles.modal__scroll}>
             <div className={styles.modal__container}>

@@ -57,7 +57,7 @@ export default function BackgroundModal({
             id={id}
             data-lenis-prevent
             style={animationModal(isOpen)}
-            onClick={(event) => { if (!event.target.closest('.modal-body')) closeModal() }}
+            onPointerDown={(event) => { if (!event.target.closest('.modal-body')) closeModal() }}
          >
             {children}
          </div>
