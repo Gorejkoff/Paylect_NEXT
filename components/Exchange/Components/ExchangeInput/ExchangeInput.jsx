@@ -24,7 +24,7 @@ export default function ExchangeInput({ value }) {
             <input
                // pattern="[0-9]*[.,]?[0-9]*"
                ref={ref}
-               inputMode='numeric'
+               inputMode='decimal'
                type='text'
                name='value_currency'
                onChange={controlValueInput}
