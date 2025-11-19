@@ -58,10 +58,12 @@ export default function useControlValueInput(ref) {
 
    function valueInput(event) {
       let value = event.target.value;
-      value = value.replace(/[,.]/, '*');
-      value = value.replace(/[,.]/g, '');
-      value = value.replace(/[*]/, '.');
-      value = value.replace(/[^\d.]/g, '');
+      value = value
+         .replace(/[,.]/, '*')
+         .replace(/[,.]/g, '')
+         .replace(/[*]/, '.')
+         .replace(/[^\d.]/g, '')
+         .replace(/\.(\d{8})\d+/, '.$1');
       event.target.value = value;
       data.current.element.innerHTML = value;
       calcSize()
