@@ -10,6 +10,7 @@ import Quote from "@/components/Quote/Quote";
 export default function Home() {
   return (
     <>
+      <div id="ci-marker" style={{display:"none"}}>ARTEX33948-bb59c29922e8e219</div>
       <Carousel
         text='PAYLECT'
       />
